@@ -1,0 +1,140 @@
+---
+title: 'malaria deaths: improvement, but not enough'
+author: Nash Sauter
+date: '2021-10-04'
+slug: malaria
+categories: []
+tags: []
+---
+> ***"of those who die from avoidable, poverty-related causes, nearly 10 million, according to UNICEF, are children under five. they die from diseases such as measles, diarrhea, and malaria that are easy and inexpensive to treat or prevent." ~peter singer***
+
+```{r libs, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+library(tidyverse)
+library(ggthemes)
+
+rawmalaria <- read.csv("https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Malaria%20deaths%20by%20region%20(IHME%2C%202017)/Malaria%20deaths%20by%20region%20(IHME%2C%202017).csv")
+```
+
+```{r data, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+malaria <- rawmalaria %>%
+  rename(deaths = Malaria.deaths..IHME..2017.,
+         entity = Entity,
+         year = Year)
+
+# Central Asia, East Asia, Europe, Latin America and the Caribbean, North Africa and Middle East, North America, Oceania
+# 1990-2016
+```
+
+# Background
+Since reading one of Peter Singer's books, *Ethics in the Real World*, I have often thought about health problems and disease in impoverished nations and how although so many people seem to be aware of the problems going on, people forget about it while they live their own lives.
+If you ask nearly anyone in the United States, they'll probably agree with you that things like malaria are huge problems in certain regions of the world that need to be fixed.
+It is also true, however, that there is constant news about new cures, innovations, and solutions that are leading to declining rates of these problems.
+While these news stories are generally true and should inspire hope, I think that it is often overlooked just how big of a problem something like malaria is in the global context.
+
+Earlier today, I found a data set released in 2017 by The Institute for Health Metrics and Evaluation (IHME), a health-focused research center based at the University of Washington.
+This data was later reformatted by Our World in Data (OWID).
+After looking into the data a bit, I thought that there were some very interesting and important facts to be found, which is why I wanted to share some of my findings on this blog.
+
+# What is this data?
+First, lets take a look at how this data is organized. 
+```{r glimpse, echo = FALSE}
+glimpse(malaria)
+```
+Here we see that the data is pretty simple. 
+There are three columns, being entity (representing the region), year, and deaths.
+Let's look at what regions are being compared.
+```{r regions, echo = FALSE}
+malaria %>%
+  count(entity)
+```
+Here we see that each of those ten defined regions has 27 corresponding pairs of years and death numbers (being the years 1990-2016).
+Now that you know what's really being measured, here's some interesting ways to visualize this data.
+
+# What does the data show?
+First, we can look at the most simple measurement, being the total amount of malaria deaths each year across all ten of the measured regions.
+
+```{r total_deaths, echo = FALSE, message=FALSE, warning=FALSE}
+total_deaths <- malaria %>%
+  group_by(year) %>%
+  summarize(year = year,
+            deaths = sum(deaths)) %>%
+  unique()
+
+total_deaths_plot <- total_deaths %>%
+  ggplot(aes(year, deaths)) +
+  geom_line() +
+  geom_point() +
+  expand_limits(y=0) +
+  labs(title = "Total malaria deaths globally",
+       subtitle = "1990-2016, IHME",
+       x = "Year",
+       y = "Malaria Deaths") +
+  theme_grey()
+
+total_deaths_plot
+```
+This alone tells a bit of an interesting story.
+We first see that there were about 750,000 malaria deaths in the year 1990.
+This number rose gradually over the next decade, peaking at around 1,000,000 deaths in 2003 before starting to decline.
+It is interesting to note that the change between 2015 and 2016 is much more gradual than previous years, but that alone isn't enough to make any kind of inferences.
+
+Lets look further into this data by breaking it down into each region.
+One way we can do this is by creating a different line to represent each region.
+
+```{r deaths_per_region, echo=FALSE, message=FALSE, warning=FALSE}
+deaths_per_region <- malaria %>%
+  ggplot(aes(x = year, y = deaths, color = entity, alpha = 0.25)) +
+  geom_point(position = "jitter") +
+  geom_smooth(se = FALSE) +
+  guides(alpha = "none") +
+  theme_grey() +
+  labs(x = "Year",
+       y = "Malaria Deaths",
+       color = "Region",
+       title = "Malaria deaths by region",
+       subtitle = "1990-2016 (IHME)")
+
+deaths_per_region
+```
+Now this gives us a greater understanding of where these deaths are occurring.
+It's clear that Sub-Saharan Africa makes up overwhelming majority of malaria deaths with even the next largest totals from South Asia and Southeast Asia making up a much smaller percentage.
+
+The last graph that I would like to show you is one that effectively combines the two prior ideas. While the first graph helped us understand the total amount of deaths due to malaria in the world, it didn't give us enough context to be able to know where those deaths occurred.
+The second graph covered that gap, but made it harder to understand in terms of totals.
+Here, you'll see a graph where each bar represents the total amount of deaths in a year, but with separate colors to break them down into regions.
+
+```{r total_deaths_plot_divided, message=FALSE, warning=FALSE, echo = FALSE}
+total_deaths_plot_divided <- malaria %>%
+  ggplot(aes(year, deaths, fill = fct_reorder(entity, deaths))) +
+  geom_col() +
+  expand_limits(y=0) +
+  labs(title = "Total malaria deaths globally (divided)",
+       subtitle = "1990-2016, IHME",
+       x = "Year",
+       y = "Malaria Deaths",
+       fill = "Region") +
+  theme_grey()
+
+total_deaths_plot_divided
+``` 
+
+# What does this mean?
+Through looking at this data, I hope that you have come to realize that although malaria is a problem that seems improving each year, it's still no where close to being solved.
+More developed areas like North America and Europe have had the ability to not worry about the prevalence of malaria, even in the poorest areas of those regions.
+This is part of what makes it so hard for us to see something like malaria as a major problem, especially compared to problems like homelessness that appear in front of our eyes every day even in some of the most prosperous parts of our nations.
+Our limited exposure is typically in the form of a yearly update about a huge number that only gets put into context of improvement.
+This isn't to say that the improvements in the last decade or so haven't been extremely positive, I'd always be happy to see a reduction of hundreds of thousands of deaths.
+However, that doesn't mean we should be inactive when it comes to 750,000 preventable deaths.
+
+If you're reading this and it's within your means to spare just a few dollars (think of the kind of money that would otherwise go to a larger drink or an extra unused piece of clothing) - I would urge you to give just a bit of money to the [**Against Malaria Foundation**](https://www.againstmalaria.com/).
+They have been year after year by groups such as GiveWell and The Life You Can Save as a top charity due to their cost-effectiveness and ability to create long-term change.
+100% (that's right, 100%) of public donations go towards purchasing long-lasting insecticidal nets (LLINs) that protect against malaria, verifying that they reach their intended destinations in an equitable manner using household-level data, and making sure that they are kept in good condition.
+
+The Against Malaria Foundation has been shown by GiveWell to be extremely transparent and efficient too, so you know that your money isn't just getting stolen or funneled into some corrupt government.
+One LLIN costs just $3 and can protect a group of 3 people for up to 3 years.
+Just one more of these nets will provide a solid step closer towards eradicating malaria.
+
+### Ending notes
+First of all, thanks for reading this post!
+I put a lot of work into doing the writing and data visualization for this, so be sure to give me some feedback about what you liked and what could be improved (or we can just talk about what I wrote about).
+Also, if you're interested in seeing the source code for this post which includes all of the text and graph generation, you can check it out on my [**github**](https://github.com/nashsauter1/rblog/blob/main/content/post/2021-10-04-malaria/index.Rmd).
