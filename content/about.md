@@ -1,6 +1,6 @@
 ---
-date: "2016-05-05T21:48:51-07:00"
-title: About
+date: "20201-10-04T21:48:51-07:00"
+title: About this blog
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+This is my new blog! I've migrated over to using Hugo and Blogdown in order to allow for some more powerful analysis in these posts. Stay tuned for more!
