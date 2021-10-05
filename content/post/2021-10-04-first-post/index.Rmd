@@ -1,0 +1,11 @@
+---
+title: First Post!
+author: Nash Sauter
+date: '2021-10-04'
+slug: first-post
+categories: []
+tags: []
+---
+
+# A Preliminary Test Post
+This is some text.
