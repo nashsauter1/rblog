@@ -11,6 +11,8 @@ tags: []
 ```{r libs, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 library(tidyverse)
 library(ggthemes)
+library(silgelib)
+theme_set(theme_plex())
 
 rawmalaria <- read.csv("https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Malaria%20deaths%20by%20region%20(IHME%2C%202017)/Malaria%20deaths%20by%20region%20(IHME%2C%202017).csv")
 ```
@@ -68,8 +70,7 @@ total_deaths_plot <- total_deaths %>%
   labs(title = "Total malaria deaths globally",
        subtitle = "1990-2016, IHME",
        x = "Year",
-       y = "Malaria Deaths") +
-  theme_grey()
+       y = "Malaria Deaths")
 
 total_deaths_plot
 ```
@@ -87,7 +88,6 @@ deaths_per_region <- malaria %>%
   geom_point(position = "jitter") +
   geom_smooth(se = FALSE) +
   guides(alpha = "none") +
-  theme_grey() +
   labs(x = "Year",
        y = "Malaria Deaths",
        color = "Region",
@@ -112,8 +112,7 @@ total_deaths_plot_divided <- malaria %>%
        subtitle = "1990-2016, IHME",
        x = "Year",
        y = "Malaria Deaths",
-       fill = "Region") +
-  theme_grey()
+       fill = "Region")
 
 total_deaths_plot_divided
 ``` 
