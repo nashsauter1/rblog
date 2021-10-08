@@ -10,8 +10,9 @@ tags: []
 
 ```{r libs, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 library(tidyverse)
-library(ggthemes)
 library(silgelib)
+library(wesanderson)
+
 theme_set(theme_plex())
 
 rawmalaria <- read.csv("https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Malaria%20deaths%20by%20region%20(IHME%2C%202017)/Malaria%20deaths%20by%20region%20(IHME%2C%202017).csv")
@@ -63,14 +64,16 @@ total_deaths <- malaria %>%
   unique()
 
 total_deaths_plot <- total_deaths %>%
-  ggplot(aes(year, deaths)) +
+  ggplot(aes(year, deaths, color = "")) +
   geom_line() +
   geom_point() +
   expand_limits(y=0) +
   labs(title = "Total malaria deaths globally",
        subtitle = "1990-2016, IHME",
        x = "Year",
-       y = "Malaria Deaths")
+       y = "Malaria Deaths") +
+  guides(colour = "none") +
+  scale_color_manual(values = wes_palette("Chevalier1", n = 1, type = "discrete"))
 
 total_deaths_plot
 ```
@@ -93,6 +96,7 @@ deaths_per_region <- malaria %>%
        color = "Region",
        title = "Malaria deaths by region",
        subtitle = "1990-2016 (IHME)")
+  # scale_color_manual(values = wes_palette("Cavalcanti1", n = 10, type = "continuous"))
 
 deaths_per_region
 ```
@@ -112,7 +116,8 @@ total_deaths_plot_divided <- malaria %>%
        subtitle = "1990-2016, IHME",
        x = "Year",
        y = "Malaria Deaths",
-       fill = "Region")
+       fill = "Region") +
+  scale_fill_manual(values = wes_palette("Royal2", n = 10, type = "continuous"))
 
 total_deaths_plot_divided
 ``` 

@@ -1,0 +1,18 @@
+---
+title: ''
+author: Nash Sauter
+date: 'yyyy-mm-dd'
+slug: title
+categories: []
+tags: []
+---
+> ***"pqr" ~abc***
+
+```{r libs, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+library(tidyverse)
+library(silgelib)
+theme_set(theme_plex())
+```
+
+# Header
+Text.
