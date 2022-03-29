@@ -1,0 +1,31 @@
+<footer class="site__footer">
+    {{ if $.Site.Params.enableBackToTopLink -}}
+    <a href="#top">{{ i18n "back_to_top" }}</a>
+    {{- end -}}
+    
+    {{- with $.Site.Data.contacts -}}
+    <div class="footer__links">
+    {{- $willUseIcons := (eq $.Site.Params.useLinkIcons true) -}}
+    {{- $socialLinks := (sort . "id" "asc") -}}
+    {{- range $socialLinks -}}
+    <a rel="me" class="footer__link" href="{{ .url }}">
+        {{- if $willUseIcons -}}
+          {{ partial "components/simple-icon.svg" .id }}
+        {{- else -}}
+          {{- if .name -}}{{ .name }}{{- else -}}{{ .id }}{{- end -}}
+        {{- end -}}
+    </a>
+    {{- end -}}
+    </div>
+    {{ end }}
+    
+    <p class="footer__sign">{{ with $.Site.Copyright }}{{ . | markdownify }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>
+
+    {{- if $.Site.IsMultiLingual }}
+    <div class="site__languages">
+    {{- range $.Site.Languages -}}
+    <a class="site__language" href="{{ . | relURL }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
+    {{- end -}}
+    </div>
+    {{ end -}}
+</footer>

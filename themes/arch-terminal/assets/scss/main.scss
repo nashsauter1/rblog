@@ -1,0 +1,76 @@
+// Importing the user-defined config.
+@import "config";
+
+// Importing the default config
+@import "default";
+
+:root {
+    // Core appearance options
+    --background: #{$background};
+    --background-dark: #{scale-color($background, $saturation: 10%, $lightness: -15%)};
+    --background-light: #{scale-color($background, $saturation: 10%, $lightness: 10%)};
+
+    --foreground: #{$foreground};
+    --foreground-dark: #{scale-color($foreground, $saturation: 10%, $lightness: -15%)};
+    --foreground-light: #{scale-color($foreground, $saturation: 10%, $lightness: 10%)};
+
+    --borderColor: #{$borderColor};
+    
+    --accent: #{$accent};
+    --accent-light: #{scale-color($accent, $saturation: -10%, $lightness: 20%)};
+    --accent-dark: #{scale-color($accent, $saturation: 20%, $lightness: -15%)};
+    
+    --fontFamily: #{$fontFamily};
+    --fontSize: #{$fontSize};
+    --iconSize: #{$iconSize};
+    
+    // Main breakpoints
+    --phoneWidth: #{$phoneWidth};
+    --desktopWidth: #{$desktopWidth};
+    
+    // Content appearance options
+    --maxWidth: #{$maxWidth};
+    --sidePadding: #{$sidePadding};
+    --contentPadding: #{$contentPadding};
+    --verticalRhythm: #{$verticalRhythm};
+    
+    // Border options
+    // It only missing the color so you should provide one.
+    --primaryBorder: #{$primaryBorder};
+    --secondaryBorder: #{$secondaryBorder};
+}
+
+.theme-2:root {
+    --background: #{$background-2nd};
+    --background-dark: #{scale-color($background-2nd, $saturation: 10%, $lightness: -15%)};
+    --background-light: #{scale-color($background-2nd, $saturation: 10%, $lightness: 15%)};
+
+    --foreground: #{$foreground-2nd};
+    --foreground-dark: #{scale-color($foreground-2nd, $saturation: 10%, $lightness: -15%)};
+    --foreground-light: #{scale-color($foreground-2nd, $saturation: 10%, $lightness: 15%)};
+    
+    --accent: #{$accent-2nd};
+    --accent-dark: #{scale-color($accent-2nd, $saturation: 10%, $lightness: -15%)};
+    --accent-light: #{scale-color($accent-2nd, $saturation: 10%, $lightness: 15%)};
+
+    --fontFamily: #{$fontFamily-2nd};
+}
+
+// Importing the fonts.
+@import "fonts";
+
+// Importing the customized style for the different text formatting languages.
+@import 
+    "asciidoctor"
+;
+
+// Importing the custom styles for the third-libraries this theme offers
+@import "libraries"; 
+
+// The main stylesheets.
+@import 
+    "base", 
+    "layout"
+;
+
+@import "extend";

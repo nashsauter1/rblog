@@ -1,0 +1,228 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--fontFamily);
+    line-height: var(--verticalRhythm);
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+
+    @media screen and (min-width: $phoneWidth) {
+        font-size: var(--fontSize);    
+    }
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: var(--maxWidth);
+    height: inherit;
+    margin: 0 auto;
+
+    padding: 1rem;
+
+    & > *:not(:last-child) {
+        margin: 0;
+        margin-bottom: 1.25rem;
+    }
+}
+
+// Text formatting
+a { 
+    position: relative;
+    color: currentColor; 
+}
+
+p { margin: var(--verticalRhythm) 0; }
+
+kbd {
+    padding: 0.2rem;
+    border: var(--primaryBorder) var(--foreground);
+}
+
+mark {
+    background: var(--foreground-light);
+    color: var(--background-light);
+}
+
+pre { 
+    --border: var(--primaryBorder) var(--accent-light);
+    background: var(--background-light);
+    border: var(--border);
+    margin: var(--verticalRhythm) 0;
+    padding: calc(var(--verticalRhythm) / 2);
+    overflow: auto;
+
+  code {
+    background: unset;
+    color: unset;
+    font-size: inherit;
+  }
+}
+
+h1 { line-height: initial; }
+
+h1, h2, h3, 
+h4, h5, h6 {
+    margin: var(--verticalRhythm) auto;
+}
+
+h2 { margin-top: calc(var(--verticalRhythm) * 2); }
+
+ul, ol {
+    margin: var(--verticalRhythm) auto;
+    
+    ul, ol { margin: unset; }
+}
+
+blockquote {
+    --border: var(--primaryBorder) var(--accent);
+    margin: 2rem 0;
+    border: var(--border);
+    padding: 1rem;
+}
+
+// Table
+table { 
+    border-collapse: collapse;
+    display: block;
+    margin: var(--verticalRhythm) auto;
+    overflow: auto;
+    width: 100%;
+}
+
+td, th {
+    border: var(--primaryBorder) var(--accent);
+    padding: calc(var(--verticalRhythm) / 2);
+}
+
+thead {
+    background: var(--accent);
+    color: var(--background-light);
+    font-weight: bolder;
+}
+
+tbody {
+    tr {
+        &:nth-child(odd) {
+            background: var(--background-dark);
+        }
+    
+        &:nth-child(even) {
+            background: var(--background-light);
+        }
+    }
+}
+
+article[data-use-content-counters="true"] {
+    // Named after the LaTeX counters after `chapter` counter. 
+    counter-reset: section subsection subsubsection paragraph subparagraph; 
+
+    $counter-spacing: 0.5rem;
+
+    // <h2> is used as a section header since <h1> is the main title
+    h2 { 
+        counter-reset: subsection;
+        counter-increment: section;
+
+        &::before {
+            content: counter(section) ".";
+            margin-right: $counter-spacing;
+        }
+    }
+
+    h3 {
+        counter-reset: subsubsection;
+        counter-increment: subsection;
+
+        &::before {
+            content: counter(section) "." counter(subsection) ".";
+            margin-right: $counter-spacing;
+        }
+    }
+
+    h4 {
+        counter-reset: paragraph;
+        counter-increment: subsubsection;
+
+        &::before {
+            content: counter(section) "." counter(subsection) "." counter(subsubsection) ".";
+            margin-right: $counter-spacing;
+        }
+    }
+
+    h5 {
+        counter-reset: subparagraph;
+        counter-increment: paragraph;
+
+        &::before {
+            content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(paragraph) ".";
+            margin-right: $counter-spacing;
+        }
+    }
+
+    h6 {
+        counter-increment: subparagraph;
+
+        &::before {
+            content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(paragraph) "." counter(subparagraph);
+            margin-right: $counter-spacing;
+        }
+    }
+}
+
+main {
+    & > * {
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+    }
+}
+
+
+// Multimedia
+iframe, img, video, audio {
+    max-width: 100%;
+}
+
+svg {
+    fill: currentColor;
+}
+
+// Form control
+button {
+    background: var(--background);
+    border: var(--primaryBorder) currentColor;
+    color: var(--accent);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    padding: 0.75rem;
+
+    &:hover {
+        background: var(--foreground);
+        color: var(--background);
+        cursor: pointer;
+    }
+}
+
+input {
+    font-size: var(--fontSize);
+    width: 100%;
+    padding: 0.5rem;
+
+    &:focus {
+        outline-width: 0.5rem;
+        outline-color: var(--accent);
+    }
+}

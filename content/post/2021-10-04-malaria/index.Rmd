@@ -5,6 +5,7 @@ date: '2021-10-04'
 slug: malaria
 categories: []
 tags: []
+description: "or why you should donate for some malaria nets"
 ---
 > ***"of those who die from avoidable, poverty-related causes, nearly 10 million, according to UNICEF, are children under five. they die from diseases such as measles, diarrhea, and malaria that are easy and inexpensive to treat or prevent." ~peter singer***
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}" >
+<head>
+  {{ partial "head.html" . -}}
+</head>
+<body>
+  {{- $isNotTopLevelPage := and (eq .Kind "page") (ne .File.Dir "/") -}}
+  {{- if not $isNotTopLevelPage -}}
+  {{ partialCached "header.html" . }}
+  {{- end }}
+  <main class="site__content">
+    {{ block "main" . -}}
+    {{- end }}
+  </main>
+  {{- if .Site.Params.enableSiteSearch -}}
+    {{ partialCached "optional/search" . }}
+  {{- end }}
+  
+  {{ partialCached "footer.html" . -}}
+
+{{ partialCached "scripts.html" . }}
+</body>
+</html>

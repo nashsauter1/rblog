@@ -5,6 +5,7 @@ date: '2022-03-28'
 slug: 2021albums
 categories: []
 tags: []
+description: "my 10 favorite albums of the year"
 ---
 # albums from 2021 that you should listen to
 Now that's it's been a number of months since the end of 2021, it's about time to recap some of the my favorite albums of the year. Here's my top 10 favorites along with a few honorable mentions.

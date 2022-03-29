@@ -1,0 +1,11 @@
+{{ define "main" }}
+    {{- with $.Site.Params.tagline -}}
+        <h2 class="site__tagline">{{- . -}}</h2>
+    {{- end -}}
+
+    {{- .Content -}}
+
+    {{- if not $.Site.Params.hidePostsOnHome -}}
+        {{- partial "posts.html" . -}}
+    {{- end -}}
+{{- end -}}
