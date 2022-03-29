@@ -1,0 +1,60 @@
+---
+title: an ethically ambigous examination of animal ethics
+author: Nash Sauter
+date: '2022-01-26'
+slug: animals-ethics
+categories: []
+tags: []
+bibliography: animals.bib
+---
+> ***"the question is not, 'can they reason?' nor, 'can they talk?' but rather, 'can they suffer?'" ~jeremy bentham***
+
+# Groundwork
+When discussing any issue of ethics and morality, there is inevitably going to be some amount of conflict regarding the basic principles and beliefs that guide how one thinks about what is right and wrong.
+A common consequence of this is that many important discussions often get left unanswered by a simple agreement to disagree, with people saying that their core beliefs are too different to be reconciled into a solution.
+In order to get around this issue, I will attempt to justify my ethical arguments in an ethically ambiguous way.
+By this, I don't mean that I will be avoiding all issues of ethics, but rather that I will try to frame my arguments such that they are agreeable regardless of what one's own ethical framework is.
+This, however, does not come without pitfalls that will need to be addressed through the following assumptions.
+
+First, these arguments assume that the reader would consider themselves a *moral agent*.
+Regardless of one's views on free will, ethic realism, or any other such philosophical topics, all that's required is that one believes that they can act in an unethical or ethical way.
+If you believe that there are actions that you cannot ethically do in some sense of the word, you are a moral agent.
+Second, these arguments assume that the reader desires to act ethically.
+Regardless of your own sense of right and wrong, I would hope that you would prefer yourself to do what you believe is right rather than wrong.
+Third, these arguments assume that the reader puts value in moral consistency.
+As these arguments are not built upon a specific ethical theory, I will primarily be appealing to consistency and inconsistency within one's ethical framework.
+Although I will not say what framework you should follow, I will assume that you hold certain things to be right and wrong (even if it's just subjective) due to some principle or guiding set of beliefs.
+If any of these are not true for you, feel free to ignore the following arguments, but keep in mind that you cannot expect anyone to listen to any of your ethical arguments with any degree of seriousness.
+
+Finally, I would like to mention that the topic of animal ethics is not a comfortable one.
+This phenomena will be discussed later, but I would state now that it is good to honestly confront uncomfortable dilemmas as they relate to your ethical beliefs.
+Without any degree of this, one's beliefs will never change in any significant manner.
+With that being said, I hope you continue reading.
+
+Test [@anthis2019]. 
+
+# The Scope of the Issue
+
+# The Irrelevance of Equality
+* We don't need to be equal to care
+* Animal lovers
+* Naming the trait
+* Dogs and pigs
+
+# Arguments that miss the point
+* Health matters (life or protein)
+* Most people don't care about health
+* However, veganism is still healthier
+* Irrelevance of taste
+
+# Selfish Ethics
+* Environmental catastrophe
+* Zoonotic disease
+* Antibiotic resistance
+
+# Why We Ignore It
+* Cognitive dissonance (everyone knows factory farms are bad)
+* The myth of the good life and humane slaughter
+* Psych articles
+
+## Bibliography
