@@ -8,7 +8,7 @@ tags: []
 description: "my 10 favorite albums of the year"
 ---
 
-Now that's it's been a number of months since the end of 2021, it's about time to recap some of the my favorite albums of the year. Here's my top 10 favorites along with a few honorable mentions.
+Now that's it's been a number of months since the end of 2021, it's about time to recap some of the my favorite albums of the year. Here's my top 10 favorites along with a few honorable mentions. Test.
 
 ## 10. Welfare Jazz - Viagra Boys (post-punk)
 Welfare Jazz is the second album from Swedish post-punk band Viagra Boys. The album features noisy instrumentals alongside rambunctious vocals dealing with pessimistic topics of burnout and failure in urban society. In a sarcastic and raw manner, the music addresses these ideas by playing up their absurdity, often to a humorous extent. The first song of the album Ain't Nice deals with masculine overcompensation, with the singer taking the role of a man trying to prove how tough and mean he is despite his vintage calculator collection and hunger for snacks.
