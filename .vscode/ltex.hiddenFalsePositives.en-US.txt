@@ -1,0 +1,3 @@
+{"rule":"EN_QUOTES","sentence":"^\\Q\"the question is not, 'can they reason?' nor, 'can they talk?' but rather, 'can they suffer?'\"\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Q\"the question is not, 'can they reason?' nor, 'can they talk?' but rather, 'can they suffer?'\"\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q~jeremy bentham\\E$"}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nash&#39;s Blog</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Nash&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>albums from 2021 that you should listen to</title>
+      <link>/2022/2021albums/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/2021albums/</guid>
+      <description>Now that’s it’s been a number of months since the end of 2021, it’s about time to recap some of the my favorite albums of the year. Here’s my top 10 favorites along with a few honorable mentions. Test.
+10. Welfare Jazz - Viagra Boys (post-punk) Welfare Jazz is the second album from Swedish post-punk band Viagra Boys. The album features noisy instrumentals alongside rambunctious vocals dealing with pessimistic topics of burnout and failure in urban society.</description>
+    </item>
+    
+    <item>
+      <title>malaria deaths: improvement, but not enough</title>
+      <link>/2021/malaria/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/malaria/</guid>
+      <description>“of those who die from avoidable, poverty-related causes, nearly 10 million, according to UNICEF, are children under five. they die from diseases such as measles, diarrhea, and malaria that are easy and inexpensive to treat or prevent.” ~peter singer
+ Background Since reading one of Peter Singer’s books, Ethics in the Real World, I have often thought about health problems and disease in impoverished nations and how although so many people seem to be aware of the problems going on, people forget about it while they live their own lives.</description>
+    </item>
+    
+    <item>
+      <title>a new beginning</title>
+      <link>/2021/first-post/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/first-post/</guid>
+      <description>“man starts over again everyday, in spite of all he knows, against all he knows.” ~emil cioran
+ As you may or may not know, I briefly ran a blog for a few months about a year ago. Although it was a lot of fun, I eventually ran out of ideas and motivation to keep writing new posts, especially considering the process that had to go formatting and publishing them.</description>
+    </item>
+    
+  </channel>
+</rss>
