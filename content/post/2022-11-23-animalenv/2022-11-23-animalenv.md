@@ -36,12 +36,20 @@ The authors of a 2020 analysis published in the *Science* journal found that eve
 
 > "Our estimate of cumulative business-as-usual food system emissions from 2020 to 2100 is 1356 Gt CO2-we. As such, even if all non–food system GHG emissions were immediately stopped and were net zero from 2020 to 2100, emissions from the food system alone would likely exceed the 1.5°C emissions limit between 2051 and 2063. Further, given our estimate of food system emissions, maintaining a 67% chance of meeting the 2°C target would require keeping cumulative nonfood emissions to \<50 Gt CO2-we in total over the next 80 years. This is slightly more than 1 year of current GHG emissions from non–food system activities {{< cite "clark2020" 2>}}."
 
+Given that, how do greenhouse gas emissions differ between diets?
+The authors, Joseph Poore with the University of Oxford and Thomas Nemecek with the Switzerland-based LCA Research Group, found that meat, seafood, eggs, and dairy contribute 56-58% of the world's emissions despite only providing us with 18% of our calories.
+As a result of this, they estimate that switching from the current average diet to a plant-based diet would reduce our GHG emissions by about 6.6 billion metric tonnes, or about 49% of our total emissions.
+In a separate study, a group of researchers from the University of Oxford analyzed a dataset of over 50,000 people with varying diets in the United Kingdom.
+They found that the even when standardizing the amount of calories consumed, daily dietary emissions caused by meat-eaters were nearly double those of vegans.
+For all of the diets in between, the amount and types of animal products eaten also had in impact.
+Emissions were the highest for high meat-eaters, followed by low meat-eaters, fish-eaters, vegetarians, and vegans in that order.
+
 ## Non-Emission Environmental Impacts
 
 Although greenhouse gases are naturally one of the top concerns relating to the protection of our environment, it's not the only concern worth investigating.
 Other issues such as land use, water use, terrestrial acidification, eutrophication [^Eutro], and other types of localized pollution also have widely varying impacts from different food sources that will force us to evaluate our dietary choices.
 One analysis of these issues from 2018 compiled data through a comprehensive meta-analysis of 1530 studies, creating a data set that covers around 38,700 farms in 119 countries and 40 individual food products representing ~90% of global protein and calorie consumption.
-The authors, Joseph Poore with the University of Oxford and Thomas Nemecek with the Switzerland-based LCA Research Group, found that global food production causes 32% of terrestrial acidification, 78% of eutrophication, 43% of non-ice and non-desert land use, and 90-95% of freshwater use when weighted for water-scarcity {{< cite "poore2018" 1>}}.
+Poore and Nemecek found that global food production causes 32% of terrestrial acidification, 78% of eutrophication, 43% of non-ice and non-desert land use, and 90-95% of freshwater use when weighted for water-scarcity {{< cite "poore2018" 1>}}.
 Unsurprisingly, the majority of these harmful environmental effects can be attributed to animal agriculture as opposed to entirely plant-based processes.
 It's estimated that if the world were to entirely replace all dietary animal products with plant-based alternatives, we could reduce land use by 76%, terrestrial acidification by 50%, eutrophication by 49%, and freshwater use by 19%.
 These changes would be especially noticeable in the United States where average meat consumption per person is three times higher than the rest of the world {{< cite "-poore2018" 5>}}.
