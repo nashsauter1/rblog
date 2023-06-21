@@ -1,12 +1,12 @@
 ---
-title: "the carnivore's catastrophe: how animal agriculture destroys the environment"
+title: "the carnivore's catastrophe: how our diets destroy the environment"
 author: Nash Sauter
-date: 2023-06-20
+date: 2023-06-21
 slug: animals-environment
-draft: true
+draft: false
 bibFile: content/post/2022-11-23-animalenv/bib.json
 bibliography: bib.bib
-listTodo: true
+listTodo: false
 ---
 
 > **"A vegan diet is probably the single biggest way to reduce your impact on planet Earth" ~Joseph Poore, Climate Researcher**
